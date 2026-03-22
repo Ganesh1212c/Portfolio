@@ -1,0 +1,92 @@
+:root {
+    --primary-bg: #f4f7f6;
+    --sidebar-bg: #2c3e50;
+    --accent-blue: #3498db;
+    --text-dark: #2c3e50;
+    --white: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    background-color: var(--primary-bg);
+    color: var(--text-dark);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: var(--sidebar-bg);
+    color: var(--white);
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    background: var(--accent-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+nav a {
+    display: block;
+    color: var(--white);
+    text-decoration: none;
+    margin: 1.5rem 0;
+    font-weight: 300;
+    transition: 0.3s;
+}
+
+nav a:hover { color: var(--accent-blue); padding-left: 10px; }
+
+/* Main Content */
+.content {
+    margin-left: 250px;
+    padding: 3rem;
+    width: 100%;
+}
+
+section { margin-bottom: 4rem; }
+
+h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
+.blue-text { color: var(--accent-blue); }
+
+.card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+.border-blue { border-left: 5px solid var(--accent-blue); }
+
+.badge {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 0.5rem;
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+/* iPad Responsive */
+@media (max-width: 768px) {
+    .sidebar { width: 100%; height: auto; position: relative; }
+    .content { margin-left: 0; padding: 1.5rem; }
+    body { flex-direction: column; }
+}
